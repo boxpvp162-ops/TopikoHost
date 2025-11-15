@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TopikoHost — Hosting serwerów Minecraft</title>
+  <meta name="description" content="TopikoHost — szybki i stabilny hosting serwerów Minecraft. Panele, backupy, SFTP, instalacja pluginów jednym kliknięciem." />
+  <style>
+    :root{--accent:#2563eb;--muted:#6b7280;--bg:#0f172a;--card:#0b1220;--glass:rgba(255,255,255,0.04)}
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;color:#e6eef8;background:linear-gradient(180deg,#071024 0%, #07122a 100%);}
+    .container{max-width:1100px;margin:48px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+    .brand{font-weight:700;font-size:20px;letter-spacing:0.4px}
+    nav{display:flex;gap:14px}
+    a.nav{color:var(--muted);text-decoration:none;font-size:14px}
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center;margin-bottom:22px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;padding:22px;box-shadow:0 6px 18px rgba(2,6,23,0.6);}
+    h1{margin:0;font-size:32px}
+    p.lead{color:var(--muted);margin-top:10px;margin-bottom:18px}
+    .cta{display:flex;gap:10px}
+    .btn{background:var(--accent);border:none;color:white;padding:10px 14px;border-radius:8px;cursor:pointer;font-weight:600}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06)}
+    .features{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
+    .feature{background:var(--glass);padding:10px;border-radius:8px;font-size:14px;color:#cfe6ff}
+    .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+    .plan{background:rgba(255,255,255,0.02);padding:16px;border-radius:10px}
+    .plan h3{margin:0 0 8px 0}
+    .plan .price{font-weight:800;font-size:20px}
+    .list{margin:12px 0 0 0;padding:0;list-style:none;color:var(--muted);font-size:14px}
+    .faq{margin-top:22px}
+    details{background:rgba(255,255,255,0.01);padding:12px;border-radius:8px;margin-bottom:8px}
+    footer{margin-top:34px;padding-top:22px;border-top:1px solid rgba(255,255,255,0.03);display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:13px}
+    @media (max-width:900px){.hero{grid-template-columns:1fr;}.plans{grid-template-columns:1fr}.container{margin:20px;padding:16px}}
+    .panel{font-family:monospace;background:#071126;padding:10px;border-radius:8px;color:#9fd3ff;font-size:13px}
+    .small{font-size:13px;color:var(--muted)}
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.03);font-weight:600}
+    .email-input{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">TopikoHost</div>
+      <nav>
+        <a class="nav" href="#oferta">Oferty</a>
+        <a class="nav" href="#funkcje">Funkcje</a>
+        <a class="nav" href="#faq">FAQ</a>
+        <a class="nav" href="#kontakt">Kontakt</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="card">
+        <h1>TopikoHost — hosting serwerów Minecraft</h1>
+        <p class="lead">Twórz serwery w kilka sekund. Panel Pterodactyl, szybkie backupy, instalacja pluginów jednym kliknięciem i wsparcie 24/7.</p>
+        <div class="cta">
+          <button class="btn" onclick="document.getElementById('signup').scrollIntoView({behavior:'smooth'})">Uruchom serwer</button>
+          <button class="btn ghost" onclick="document.getElementById('oferta').scrollIntoView({behavior:'smooth'})">Zobacz oferty</button>
+        </div>
+        <div class="features">
+          <div class="feature">Panel Pterodactyl</div>
+          <div class="feature">Automatyczne backupy</div>
+          <div class="feature">SFTP & pełny dostęp</div>
+          <div class="feature">Anty‑DDoS</div>
+        </div>
+
+        <section id="oferta" style="margin-top:18px">
+          <h2 class="small" style="margin:0 0 8px 0">Plany</h2>
+          <div class="plans">
+            <div class="plan">
+              <h3>Start</h3>
+              <div class="price">€2.99 / mc</div>
+              <ul class="list">
+                <li>4 GB RAM</li>
+                <li>1 vCPU</li>
+                <li>Panel Pterodactyl</li>
+                <li>24h backup</li>
+              </ul>
+              <div style="margin-top:10px"><button class="btn">Wybierz</button></div>
+            </div>
+
+            <div class="plan">
+              <h3>Standard</h3>
+              <div class="price">€5.99 / mc</div>
+              <ul class="list">
+                <li>6 GB RAM</li>
+                <li>1–2 vCPU</li>
+                <li>Wsparcie 24/7</li>
+                <li>Anty‑DDoS</li>
+              </ul>
+              <div style="margin-top:10px"><button class="btn">Wybierz</button></div>
+            </div>
+
+            <div class="plan">
+              <h3>Premium</h3>
+              <div class="price">€12.99 / mc</div>
+              <ul class="list">
+                <li>12 GB RAM</li>
+                <li>4 vCPU</li>
+                <li>Prioritetowy support</li>
+                <li>Snapshoty</li>
+              </ul>
+              <div style="margin-top:10px"><button class="btn">Wybierz</button></div>
+            </div>
+
+          </div>
+        </section>
+
+      </div>
+
+      <aside class="card">
+        <div class="badge">Szybki start</div>
+        <h3 style="margin-top:14px">Zacznij teraz</h3>
+        <p class="small">Wprowadź e‑mail, a my przygotujemy dla Ciebie darmowy 24h serwer testowy.</p>
+        <div style="margin-top:10px">
+          <input class="email-input" type="email" id="email" placeholder="twoj@email.pl" />
+        </div>
+        <div style="margin-top:10px;display:flex;gap:8px">
+          <button class="btn" onclick="signup()">Uruchom test</button>
+          <button class="btn ghost" onclick="copyPanelCmd()">Kopia: panel</button>
+        </div>
+
+        <div style="margin-top:12px">
+          <div class="small">Szybki przykład: <div class="panel" style="margin-top:8px">pterodactyl:install &amp;&amp; setup:topiko</div></div>
+        </div>
+
+      </aside>
+    </section>
+
+    <section id="funkcje" class="card" style="margin-bottom:12px">
+      <h2 style="margin-top:0">Funkcje</h2>
+      <ul class="list">
+        <li>Panel Pterodactyl — łatwe zarządzanie serwerem.</li>
+        <li>Instalator pluginów — Spigot/Paper/Purpur w 1 klik.</li>
+        <li>Pełny dostęp SFTP, konsola online.</li>
+        <li>Backupy i snapshoty z możliwością przywrócenia.</li>
+      </ul>
+    </section>
+
+    <section id="faq" class="faq">
+      <h2 class="small">FAQ</h2>
+      <details>
+        <summary>Jak uruchomić serwer?</summary>
+        <div class="small" style="margin-top:8px">Wybierz plan → zarejestruj konto → serwer zostanie utworzony automatycznie (zwykle <strong>30 sekund</strong>).</div>
+      </details>
+      <details>
+        <summary>Jak wgrać pluginy?</summary>
+        <div class="small" style="margin-top:8px">Zaloguj się do panelu → Files → plugins → wrzuć .jar → restart serwera.</div>
+      </details>
+      <details>
+        <summary>Jak zmienić obrazki i kolory?</summary>
+        <div class="small" style="margin-top:8px">Strona jest zaprojektowana bez obrazków — aby dodać, edytuj sekcję header lub hero i wklej <code>&lt;img src=...&gt;</code> albo zmień kolory w :root.</div>
+      </details>
+    </section>
+
+    <section id="kontakt" class="card" style="margin-top:12px">
+      <h2 style="margin-top:0">Kontakt</h2>
+      <p class="small">Masz pytania? Napisz: <strong>support@topikohost.pl</strong></p>
+      <p class="small">© 2025 TopikoHost</p>
+    </section>
+
+    <footer>
+      <div>TopikoHost • Szybki hosting Minecraft</div>
+      <div class="small">Kontakt: support@topikohost.pl</div>
+    </footer>
+
+    <div id="signup" style="height:18px"></div>
+
+  </div>
+
+  <script>
+    function signup(){
+      const email = document.getElementById('email').value || 'demo@demo.pl';
+      alert('Darmowy serwer testowy uruchomiony dla: ' + email + '\n(ten alert jest przykładowy — podłącz backend aby działał rzeczywiście)');
+    }
+    function copyPanelCmd(){
+      navigator.clipboard?.writeText('pterodactyl:install && setup:topiko')
+        .then(()=>alert('Skopiowano komendę panelu'))
+        .catch(()=>alert('Twoja przeglądarka nie pozwala na kopiowanie'))
+    }
+  </script>
+</body>
+</html>
